@@ -66,7 +66,7 @@ Respond with only the complete HTML document, nothing else.`;
     }
 
     const data = await response.json();
-    let html = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+    let html = data?.choices?.[0]?.message?.content || "";
 
     // Strip any accidental markdown code fences
     html = html.replace(/^```[a-z]*\n?/i, "").replace(/```$/i, "").trim();
