@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
     return res.status(400).json({ error: "No code provided." });
   }
 
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) {
     return res.status(500).json({ error: "Server configuration error." });
   }
